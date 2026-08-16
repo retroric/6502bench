@@ -274,8 +274,8 @@ namespace SourceGen.AsmGen {
             config.ForceAbsOpcodeSuffix = string.Empty;
             config.ForceLongOpcodeSuffix = string.Empty;
             config.ForceDirectOperandPrefix = string.Empty;
-            config.ForceAbsOperandPrefix = "@w";       // word
-            config.ForceLongOperandPrefix = "@l";      // long
+            config.ForceAbsOperandPrefix = "@w ";       // word
+            config.ForceLongOperandPrefix = "@l ";      // long
             config.EndOfLineCommentDelimiter = ";";
             config.FullLineCommentDelimiterBase = ";";
             config.NonUniqueLabelPrefix = "";      // should be '_', but that's a valid label char

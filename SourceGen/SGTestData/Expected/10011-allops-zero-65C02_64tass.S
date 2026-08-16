@@ -23,9 +23,9 @@ L1014   ora     ($00,x)
         ora     #$00
         asl     a
         .byte   $0b
-        tsb     @w$0000
-        ora     @w$0000
-        asl     @w$0000
+        tsb     @w $0000
+        ora     @w $0000
+        asl     @w $0000
         .byte   $0f
         bpl     _L1031
 _L1031  ora     ($00),y
@@ -39,9 +39,9 @@ _L1031  ora     ($00),y
         ora     $0000,y
         inc     a
         .byte   $1b
-        trb     @w$0000
-        ora     @w$0000,x
-        asl     @w$0000,x
+        trb     @w $0000
+        ora     @w $0000,x
+        asl     @w $0000,x
         .byte   $1f
         jsr     $0000
         and     ($00,x)
@@ -55,9 +55,9 @@ _L1031  ora     ($00),y
         and     #$00
         rol     a
         .byte   $2b
-        bit     @w$0000
-        and     @w$0000
-        rol     @w$0000
+        bit     @w $0000
+        and     @w $0000
+        rol     @w $0000
         .byte   $2f
         bmi     _L106D
 _L106D  and     ($00),y
@@ -71,9 +71,9 @@ _L106D  and     ($00),y
         and     $0000,y
         dec     a
         .byte   $3b
-        bit     @w$0000,x
-        and     @w$0000,x
-        rol     @w$0000,x
+        bit     @w $0000,x
+        and     @w $0000,x
+        rol     @w $0000,x
         .byte   $3f
         rti
 
@@ -90,8 +90,8 @@ L108A   eor     ($00,x)
         .byte   $4b
         jmp     _L109E
 
-_L109E  eor     @w$0000
-        lsr     @w$0000
+_L109E  eor     @w $0000
+        lsr     @w $0000
         .byte   $4f
         bvc     _L10A7
 _L10A7  eor     ($00),y
@@ -106,8 +106,8 @@ _L10A7  eor     ($00),y
         phy
         .byte   $5b
         .byte   $5c,$00,$00
-        eor     @w$0000,x
-        lsr     @w$0000,x
+        eor     @w $0000,x
+        lsr     @w $0000,x
         .byte   $5f
         rts
 
@@ -124,8 +124,8 @@ L10C4   adc     ($00,x)
         .byte   $6b
         jmp     ($0000)
 
-L10D8   adc     @w$0000
-        ror     @w$0000
+L10D8   adc     @w $0000
+        ror     @w $0000
         .byte   $6f
         bvs     _L10E1
 _L10E1  adc     ($00),y
@@ -141,8 +141,8 @@ _L10E1  adc     ($00),y
         .byte   $7b
         jmp     ($0000,x)
 
-L10F6   adc     @w$0000,x
-        ror     @w$0000,x
+L10F6   adc     @w $0000,x
+        ror     @w $0000,x
         .byte   $7f
         bra     _L10FF
 
@@ -157,9 +157,9 @@ _L10FF  sta     ($00,x)
         bit     #$00
         txa
         .byte   $8b
-        sty     @w$0000
-        sta     @w$0000
-        stx     @w$0000
+        sty     @w $0000
+        sta     @w $0000
+        stx     @w $0000
         .byte   $8f
         bcc     _L111C
 _L111C  sta     ($00),y
@@ -173,9 +173,9 @@ _L111C  sta     ($00),y
         sta     $0000,y
         txs
         .byte   $9b
-        stz     @w$0000
-        sta     @w$0000,x
-        stz     @w$0000,x
+        stz     @w $0000
+        sta     @w $0000,x
+        stz     @w $0000,x
         .byte   $9f
         ldy     #$00
         lda     ($00,x)
@@ -189,9 +189,9 @@ _L111C  sta     ($00),y
         lda     #$00
         tax
         .byte   $ab
-        ldy     @w$0000
-        lda     @w$0000
-        ldx     @w$0000
+        ldy     @w $0000
+        lda     @w $0000
+        ldx     @w $0000
         .byte   $af
         bcs     _L1157
 _L1157  lda     ($00),y
@@ -205,9 +205,9 @@ _L1157  lda     ($00),y
         lda     $0000,y
         tsx
         .byte   $bb
-        ldy     @w$0000,x
-        lda     @w$0000,x
-        ldx     @w$0000,y
+        ldy     @w $0000,x
+        lda     @w $0000,x
+        ldx     @w $0000,y
         .byte   $bf
         cpy     #$00
         cmp     ($00,x)
@@ -221,9 +221,9 @@ _L1157  lda     ($00),y
         cmp     #$00
         dex
         .byte   $cb
-        cpy     @w$0000
-        cmp     @w$0000
-        dec     @w$0000
+        cpy     @w $0000
+        cmp     @w $0000
+        dec     @w $0000
         .byte   $cf
         bne     _L1192
 _L1192  cmp     ($00),y
@@ -238,8 +238,8 @@ _L1192  cmp     ($00),y
         phx
         .byte   $db
         .byte   $dc,$00,$00
-        cmp     @w$0000,x
-        dec     @w$0000,x
+        cmp     @w $0000,x
+        dec     @w $0000,x
         .byte   $df
         cpx     #$00
         sbc     ($00,x)
@@ -253,9 +253,9 @@ _L1192  cmp     ($00),y
         sbc     #$00
         nop
         .byte   $eb
-        cpx     @w$0000
-        sbc     @w$0000
-        inc     @w$0000
+        cpx     @w $0000
+        sbc     @w $0000
+        inc     @w $0000
         .byte   $ef
         beq     _L11CD
 _L11CD  sbc     ($00),y
@@ -270,6 +270,6 @@ _L11CD  sbc     ($00),y
         plx
         .byte   $fb
         .byte   $fc,$00,$00
-        sbc     @w$0000,x
-        inc     @w$0000,x
+        sbc     @w $0000,x
+        inc     @w $0000,x
         .byte   $ff

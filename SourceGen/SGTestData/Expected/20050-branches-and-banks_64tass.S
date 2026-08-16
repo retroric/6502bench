@@ -3,7 +3,7 @@
         jmp     L0000
 
         .logical $0000
-L0000   bit     @wL0000
+L0000   bit     @w L0000
 L0003   lda     L0000
         lda     L0003
         bne     LFFC3
@@ -21,7 +21,7 @@ L0012   lda     lodat+1
 
         .here
         .logical $0080
-L0080   bit     @wL0080
+L0080   bit     @w L0080
         jmp     LFFC6
 
         .here

@@ -17,7 +17,7 @@ lodat   .byte   $00
         .logical $440000
 L440000 cmp     L440000
 L440004 lda     L440000
-        lda     @wL440000 & $ffff
+        lda     @w L440000 & $ffff
         lda     zero
         bmi     L440004
         per     high44

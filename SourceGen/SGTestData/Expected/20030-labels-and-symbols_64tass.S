@@ -29,7 +29,7 @@ start   lda     #zip
         lda     #<start
         lda     #>start
         lda     zip+1
-        lda     @wzip+1
+        lda     @w zip+1
         lda     absh-1
         lda     absh+1
         lda     start+1

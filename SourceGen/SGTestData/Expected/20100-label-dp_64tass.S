@@ -36,9 +36,9 @@ L1038   slo     (L0080,x)
         asl     a
         anc     #$80
         .byte   $0c,$86,$00
-        ora     @wL0086
-        asl     @wL0086
-        slo     @wL0086
+        ora     @w L0086
+        asl     @w L0086
+        slo     @w L0086
         bpl     _L1056
 _L1056  ora     (L0080),y
         .byte   $12
@@ -53,9 +53,9 @@ L1059   slo     (L0080),y
         .byte   $1a
         slo     L0086,y
         .byte   $1c,$86,$00
-        ora     @wL0086,x
-        asl     @wL0086,x
-        slo     @wL0086,x
+        ora     @w L0086,x
+        asl     @w L0086,x
+        slo     @w L0086,x
         jsr     L0086
         and     (L0080,x)
         .byte   $22
@@ -69,10 +69,10 @@ L107D   rla     (L0080,x)
         and     #$80
         rol     a
         .byte   $2b,$80
-        bit     @wL0086
-        and     @wL0086
-        rol     @wL0086
-        rla     @wL0086
+        bit     @w L0086
+        and     @w L0086
+        rol     @w L0086
+        rla     @w L0086
         bmi     _L109B
 _L109B  and     (L0080),y
         .byte   $32
@@ -87,9 +87,9 @@ L109E   rla     (L0080),y
         .byte   $3a
         rla     L0086,y
         .byte   $3c,$86,$00
-        and     @wL0086,x
-        rol     @wL0086,x
-        rla     @wL0086,x
+        and     @w L0086,x
+        rol     @w L0086,x
+        rla     @w L0086,x
         rti
 
 L10BD   eor     (L0080,x)
@@ -106,9 +106,9 @@ L10C0   sre     (L0080,x)
         alr     #$80
         jmp     _L10D3
 
-_L10D3  eor     @wL0086
-        lsr     @wL0086
-        sre     @wL0086
+_L10D3  eor     @w L0086
+        lsr     @w L0086
+        sre     @w L0086
         bvc     _L10DE
 _L10DE  eor     (L0080),y
         .byte   $52
@@ -123,9 +123,9 @@ L10E1   sre     (L0080),y
         .byte   $5a
         sre     L0086,y
         .byte   $5c,$86,$00
-        eor     @wL0086,x
-        lsr     @wL0086,x
-        sre     @wL0086,x
+        eor     @w L0086,x
+        lsr     @w L0086,x
+        sre     @w L0086,x
         rts
 
 L1100   adc     (L0080,x)
@@ -142,9 +142,9 @@ L1103   rra     (L0080,x)
         arr     #$80
         jmp     (L0086)
 
-L1116   adc     @wL0086
-        ror     @wL0086
-        rra     @wL0086
+L1116   adc     @w L0086
+        ror     @w L0086
+        rra     @w L0086
         bvs     _L1121
 _L1121  adc     (L0080),y
         .byte   $72
@@ -159,9 +159,9 @@ L1124   rra     (L0080),y
         .byte   $7a
         rra     L0086,y
         .byte   $7c,$86,$00
-        adc     @wL0086,x
-        ror     @wL0086,x
-        rra     @wL0086,x
+        adc     @w L0086,x
+        ror     @w L0086,x
+        rra     @w L0086,x
         .byte   $80,$80
         sta     (L0080,x)
         .byte   $82,$80
@@ -174,10 +174,10 @@ L1124   rra     (L0080),y
         .byte   $89,$80
         txa
         ane     #$80
-        sty     @wL0086
-        sta     @wL0086
-        stx     @wL0086
-        sax     @wL0086
+        sty     @w L0086
+        sta     @w L0086
+        stx     @w L0086
+        sax     @w L0086
         bcc     _L1166
 _L1166  sta     (L0080),y
         .byte   $92
@@ -191,8 +191,8 @@ L1169   sha     (L0080),y
         sta     L0086,y
         txs
         tas     L0086,y
-        shy     @wL0086,x
-        sta     @wL0086,x
+        shy     @w L0086,x
+        sta     @w L0086,x
         shx     L0086,y
         sha     L0086,y
         ldy     #$80
@@ -207,10 +207,10 @@ L1169   sha     (L0080),y
         lda     #$80
         tax
         lax     #$80
-        ldy     @wL0086
-        lda     @wL0086
-        ldx     @wL0086
-        lax     @wL0086
+        ldy     @w L0086
+        lda     @w L0086
+        ldx     @w L0086
+        lax     @w L0086
         bcs     _L11AB
 _L11AB  lda     (L0080),y
         .byte   $b2
@@ -224,10 +224,10 @@ L11AE   lax     (L0080),y
         lda     L0086,y
         tsx
         las     L0086,y
-        ldy     @wL0086,x
-        lda     @wL0086,x
-        ldx     @wL0086,y
-        lax     @wL0086,y
+        ldy     @w L0086,x
+        lda     @w L0086,x
+        ldx     @w L0086,y
+        lax     @w L0086,y
         cpy     #$80
         cmp     (L0080,x)
         .byte   $c2,$80
@@ -240,10 +240,10 @@ L11AE   lax     (L0080),y
         cmp     #$80
         dex
         sbx     #$80
-        cpy     @wL0086
-        cmp     @wL0086
-        dec     @wL0086
-        dcp     @wL0086
+        cpy     @w L0086
+        cmp     @w L0086
+        dec     @w L0086
+        dcp     @w L0086
         bne     _L11F0
 _L11F0  cmp     (L0080),y
         .byte   $d2
@@ -258,9 +258,9 @@ L11F3   dcp     (L0080),y
         .byte   $da
         dcp     L0086,y
         .byte   $dc,$86,$00
-        cmp     @wL0086,x
-        dec     @wL0086,x
-        dcp     @wL0086,x
+        cmp     @w L0086,x
+        dec     @w L0086,x
+        dcp     @w L0086,x
         cpx     #$80
         sbc     (L0080,x)
         .byte   $e2,$80
@@ -273,10 +273,10 @@ L11F3   dcp     (L0080),y
         sbc     #$80
         nop
         .byte   $eb,$80
-        cpx     @wL0086
-        sbc     @wL0086
-        inc     @wL0086
-        isc     @wL0086
+        cpx     @w L0086
+        sbc     @w L0086
+        inc     @w L0086
+        isc     @w L0086
         beq     _L1235
 _L1235  sbc     (L0080),y
         .byte   $f2
@@ -291,12 +291,12 @@ L1238   isc     (L0080),y
         .byte   $fa
         isc     L0086,y
         .byte   $fc,$86,$00
-        sbc     @wL0086,x
-        inc     @wL0086,x
-        isc     @wL0086,x
+        sbc     @w L0086,x
+        inc     @w L0086,x
+        isc     @w L0086,x
         .logical $0080
 L0080   bit     _L0082
 _L0082  bit     _L0082
         bit     _L0082
-L0086   bit     @wL0086
+L0086   bit     @w L0086
         .here

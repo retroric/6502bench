@@ -19,7 +19,7 @@ L30000  clc
         lda     #>_L23456
         lda     #`_L23456
         lda     _L80019
-        lda     @w_L80019 & $ffff
+        lda     @w _L80019 & $ffff
         lda     #<_L80019
         lda     #>_L80019
         lda     #`_L80019
@@ -61,9 +61,9 @@ _L30073 phk
         asl     a
         asl     a
         tax
-        lda     @w_L30088 & $ffff,x
+        lda     @w _L30088 & $ffff,x
         pha
-        lda     @w_L30086 & $ffff,x
+        lda     @w _L30086 & $ffff,x
         pha
         beq     _L3008E
         rts
@@ -136,7 +136,7 @@ _L23477 nop
         .here
         .logical $080000
 _L80000 lda     _L80000
-        lda     @w_L80019 & $ffff
+        lda     @w _L80019 & $ffff
         nop
         lda     $010000
         lda     $020000

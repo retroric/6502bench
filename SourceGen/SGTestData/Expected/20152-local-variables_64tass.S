@@ -105,8 +105,8 @@ DPNOP   .var    $80        ;same as org
         .logical $0080
 DPCODE  nop
         lda     DPCODE
-        lda     @wDPCODE
-        lda     @lDPCODE
+        lda     @w DPCODE
+        lda     @l DPCODE
 _SPLIT1 lda     #','
 SPLITTER .var   $80
         ldx     $1234
@@ -171,7 +171,7 @@ _L00DA  lda     LEN
         .as
         .xs
 L00E6   bit     ARG+2
-        bit     @w$00ff
+        bit     @w $00ff
         bit     $0100
         rts
 

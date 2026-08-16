@@ -47,12 +47,12 @@ start   clc
         pea     biggie & $ffff
         pea     biggie >> 16
         lda     zip+1
-        lda     @wzip+1
-        lda     @lzip+1
+        lda     @w zip+1
+        lda     @l zip+1
         lda     absh-1
-        lda     @labsh-1
+        lda     @l absh-1
         lda     absh+1
-        lda     @labsh+1
+        lda     @l absh+1
         lda     0+(start & $ffff)+1
         lda     start+1
         lda     0+(start & $ffff)-1
@@ -264,7 +264,7 @@ L22000  nop
         jsr     $023456
         lda     ptest & $ffff,x
         jsr     ptest
-        lda     @wtestlow & $ffff,x
+        lda     @w testlow & $ffff,x
         jsr     testlow
         lda     testzp,x
         nop
@@ -273,7 +273,7 @@ L22000  nop
         jsr     biggie & $ffff,k
         lda     ptest & $ffff,x
         jsr     ptest
-        lda     @wtestlow & $ffff,x
+        lda     @w testlow & $ffff,x
         jsr     testlow
         lda     testzp,x
         nop
@@ -282,7 +282,7 @@ L22000  nop
         jsr     $023456
         lda     $1001,x
         jsr     $021001
-        lda     @w$0010,x
+        lda     @w $0010,x
         jsr     $020010
         lda     $10,x
         nop
@@ -295,7 +295,7 @@ L22000  nop
         jsr     144470
         lda     4097,x
         jsr     135169
-        lda     @w16,x
+        lda     @w 16,x
         jsr     131088
         lda     16,x
         rts

@@ -27,8 +27,8 @@
         lda     #'h'
         lda     #'H' | $80
         lda     #$6868
-        lda     @l'h'
-        lda     @l'H' | $80
+        lda     @l 'h'
+        lda     @l 'H' | $80
         nop
         lda     #0
         lda     #1

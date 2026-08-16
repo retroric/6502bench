@@ -103,9 +103,9 @@ DPNOP   .var    $80        ;same as org
         .logical $0080
 DPCODE  nop
         lda     DPCODE
-        lda     @wDPCODE
+        lda     @w DPCODE
         nop
-        ora     @wDPCODE
+        ora     @w DPCODE
 _SPLIT1 lda     #','
 SPLITTER .var   $80
         ldx     $1234

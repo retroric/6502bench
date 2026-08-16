@@ -49,7 +49,7 @@ bword   .macro
 
 skipdata lda    #'h'
         lda     'h'
-        lda     @w'h'
+        lda     @w 'h'
         lda     #$1f
         lda     #' '
         lda     #'"'
@@ -99,7 +99,7 @@ L10A4   nop
         lda     #-1
         lda     1
         lda     254
-        lda     @w1
+        lda     @w 1
         lda     65534
         jmp     4311
 
